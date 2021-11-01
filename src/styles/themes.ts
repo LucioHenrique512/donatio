@@ -5,6 +5,9 @@ export const lightTheme = {
   flatGold: '#ECCC68',
   white: '#FFFFFF',
   black: '#000000',
+  textInputColor: '#00000013',
+  error: '#ff4757',
+  warning: '#ffa502',
 };
 
 export type ThemeType = typeof lightTheme;
@@ -16,4 +19,7 @@ export const darkTheme: ThemeType = {
   flatGold: '#ECCC68',
   white: '#FFFFFF',
   black: '#000000',
+  textInputColor: '#FFFFFF13',
+  error: '#ff4757',
+  warning: '#ffa502',
 };

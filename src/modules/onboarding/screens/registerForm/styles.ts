@@ -14,3 +14,8 @@ export const StepTitle = styled.Text`
   font-weight: 700;
   color: ${({theme}) => theme.textColor};
 `;
+
+export const FormContainer = styled.ScrollView`
+  flex: 1;
+  margin-top: ${RFPercentage(3)}px;
+`;
