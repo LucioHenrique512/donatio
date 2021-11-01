@@ -7,6 +7,7 @@ export const Container = styled.View`
   justify-content: space-between;
   align-items: center;
   padding: 0px ${scrennPadding}px;
+  background: ${({theme}) => theme.background};
 `;
 
 export const AppTitle = styled.Text`
@@ -22,4 +23,5 @@ export const Image = styled.Image``;
 
 export const ButtonsContainer = styled.View`
   width: 100%;
+  margin-bottom: ${RFPercentage(5)}px;
 `;

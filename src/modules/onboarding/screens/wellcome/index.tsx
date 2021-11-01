@@ -1,6 +1,12 @@
+import {CompositeNavigationProp, useNavigation} from '@react-navigation/core';
+import {
+  NativeStackNavigationProp,
+  NativeStackScreenProps,
+} from '@react-navigation/native-stack';
 import React from 'react';
 import {Alert, Text} from 'react-native';
 import {Button} from '../../../../components';
+import {OnboardingStackParamList} from '../../routes/routes';
 import {
   AppTitle,
   ButtonsContainer,
@@ -9,7 +15,12 @@ import {
   ImageContainer,
 } from './styles';
 
-export const WellcomeScreen: React.FC = () => {
+type WellcomeScreenProps = NativeStackScreenProps<
+  OnboardingStackParamList,
+  'Wellcome'
+>;
+
+export const WellcomeScreen: React.FC<WellcomeScreenProps> = ({navigation}) => {
   return (
     <Container>
       <AppTitle>Donatio</AppTitle>
@@ -18,8 +29,8 @@ export const WellcomeScreen: React.FC = () => {
       </ImageContainer>
       <ButtonsContainer>
         <Button
-          text="Não tem conta, clique aqui."
-          onPress={() => Alert.alert('teste', 'deu certo')}
+          text="Não tem usuário, clique aqui."
+          onPress={() => navigation.navigate('RegisterFormScreen')}
         />
         <Button
           text="Entrar"
