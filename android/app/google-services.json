@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "569460115548",
+    "project_id": "donatio-c6eea",
+    "storage_bucket": "donatio-c6eea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569460115548:android:774db2204e5d8533097e99",
+        "android_client_info": {
+          "package_name": "com.donatio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569460115548-bn54hsrtf7f7uu6vhtg8vao5agasll3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.donatio",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "569460115548-o0cp9ljnpil8uetdtpm7qnk5nm691jjn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9eb0FICP4FUrBm3H6MLRN8kfBJMEYh0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569460115548-o0cp9ljnpil8uetdtpm7qnk5nm691jjn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

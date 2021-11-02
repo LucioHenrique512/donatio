@@ -2,50 +2,17 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 
 import {Button, ProgressBar, TextInput, TopBar} from '../../../../components';
-import {OnboardingStackParamList} from '../../routes/routes';
 import {Container, StepTitle, FormContainer, ButtonContainer} from './styles';
 import {useFormik} from 'formik';
-import * as yup from 'yup';
+import {RegisterFormScreenProps, validationSchema} from './types';
 import {maskedInputPatterns} from '../../../../utils';
-
-type RegisterFormScreenProps = NativeStackScreenProps<
-  OnboardingStackParamList,
-  'Wellcome'
->;
-
-const validationSchema = yup.object().shape({
-  fullName: yup
-    .string()
-    .required('Favor informe o seu nome.')
-    .test('fullName', 'Favor informe seu nome e sobrenome.', value => {
-      const valueArray = `${value}`.split(' ');
-      const validation =
-        valueArray.length > 1 && valueArray[1].split('').length > 1;
-      return validation;
-    }),
-  email: yup
-    .string()
-    .email('Favor insira um email válido')
-    .required('Favor informe o email da sua conta.'),
-  phoneNumber: yup
-    .string()
-    .min(11, 'Favor informe um telefone válido.')
-    .required('Favor insira o seu telefone com  whatsapp.'),
-  password: yup
-    .string()
-    .required('Favor insira a senha')
-    .min(6, 'A senha deve conter no minimo 6 digitos.'),
-  passwordConfirmation: yup
-    .string()
-    .required('Favor confirme a sua senha.')
-    .test('passwordMatch', 'As senhas não coincidem.', (value, context) => {
-      const {password} = context.parent;
-      if (!!value && !!password) return password === value;
-      else return false;
-    }),
-});
+import auth from '@react-native-firebase/auth';
 
 export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
+  const createUser = async (email: string, password: string) => {
+    return await auth().createUserWithEmailAndPassword(email, password);
+  };
+
   const {values, errors, touched, handleChange, handleBlur, handleSubmit} =
     useFormik({
       initialValues: {
@@ -55,9 +22,15 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
         password: '',
         passwordConfirmation: '',
       },
-      validationSchema,
+      //validationSchema,
       onSubmit: values => {
-        console.log(values.phoneNumber.length);
+        createUser(values.email, values.password)
+          .then(confirmation => {
+            console.log(confirmation);
+          })
+          .catch(error => {
+            console.log('deu erro', error);
+          });
       },
     });
 
