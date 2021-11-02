@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		514324B088BB2B69D9271680 /* libPods-donatio-donatioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCDB411A1B1EF8DB07019F3 /* libPods-donatio-donatioTests.a */; };
-		58A1C9CFF26D8E11C72159F7 /* libPods-donatio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D953B28C31454215B9D651C /* libPods-donatio.a */; };
+		5ABDF7ADEF232DFEF7FF4D03 /* libPods-donatio-donatioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE9C1E78B4F9D73D2D31053 /* libPods-donatio-donatioTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9AF4988D269DE2CD7DEF65D0 /* libPods-donatio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D4C3AF95D23D15742F1198 /* libPods-donatio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,36 @@
 		00E356EE1AD99517003FC87E /* donatioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = donatioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* donatioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = donatioTests.m; sourceTree = "<group>"; };
-		1219ECB320F139ABF64E72BA /* Pods-donatio-donatioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio-donatioTests.release.xcconfig"; path = "Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests.release.xcconfig"; sourceTree = "<group>"; };
+		03A144D898824087A24DD400 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		0A35B18A7DBF4D71921CA94B /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		0C91893B0DC94662B51352DC /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* donatio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = donatio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = donatio/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = donatio/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = donatio/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = donatio/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = donatio/main.m; sourceTree = "<group>"; };
-		1FCDB411A1B1EF8DB07019F3 /* libPods-donatio-donatioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-donatio-donatioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		369F77580093AE0363DBCAA4 /* Pods-donatio-donatioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio-donatioTests.debug.xcconfig"; path = "Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3D953B28C31454215B9D651C /* libPods-donatio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-donatio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		164E11135F2E49838D05E58F /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		1C9D4AD08AE744A385FE4130 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		302F1A667C1E45189F682509 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		493B559A244A13522D6C22D2 /* Pods-donatio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio.debug.xcconfig"; path = "Target Support Files/Pods-donatio/Pods-donatio.debug.xcconfig"; sourceTree = "<group>"; };
+		4DE9C1E78B4F9D73D2D31053 /* libPods-donatio-donatioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-donatio-donatioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5775582AB4594A7E8D3E9E09 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		588ACFF39CBA435EB3F9B4ED /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		5DE8678521C64F05962C0BD6 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		7E16CC22011D30D0E8EEC017 /* Pods-donatio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio.release.xcconfig"; path = "Target Support Files/Pods-donatio/Pods-donatio.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = donatio/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BDB7F917339F052AC51D560E /* Pods-donatio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio.debug.xcconfig"; path = "Target Support Files/Pods-donatio/Pods-donatio.debug.xcconfig"; sourceTree = "<group>"; };
+		A6FFFF3933CF44708BAD884D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		A8D4C3AF95D23D15742F1198 /* libPods-donatio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-donatio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF4D3B053184C448BC8CACD /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		B101F214A07E8E9EFBB59E65 /* Pods-donatio-donatioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio-donatioTests.release.xcconfig"; path = "Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests.release.xcconfig"; sourceTree = "<group>"; };
+		B4130539D12A4E15969165AF /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		BB0C2C51EBC64626A3D9F645 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		BFE1485353CE414E9A0C42AD /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		C1E64EA96C0249DBB8CA2232 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		C89AAF14141A6A1857CEF3B2 /* Pods-donatio-donatioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio-donatioTests.debug.xcconfig"; path = "Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8C6522591464B62979014E8 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F3B99D710B4ED472007CD282 /* Pods-donatio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donatio.release.xcconfig"; path = "Target Support Files/Pods-donatio/Pods-donatio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514324B088BB2B69D9271680 /* libPods-donatio-donatioTests.a in Frameworks */,
+				5ABDF7ADEF232DFEF7FF4D03 /* libPods-donatio-donatioTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58A1C9CFF26D8E11C72159F7 /* libPods-donatio.a in Frameworks */,
+				9AF4988D269DE2CD7DEF65D0 /* libPods-donatio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				3D953B28C31454215B9D651C /* libPods-donatio.a */,
-				1FCDB411A1B1EF8DB07019F3 /* libPods-donatio-donatioTests.a */,
+				A8D4C3AF95D23D15742F1198 /* libPods-donatio.a */,
+				4DE9C1E78B4F9D73D2D31053 /* libPods-donatio-donatioTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +138,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				979B15A29EACA3708841BF5E /* Pods */,
+				D61D61C5A3564B7EB1693B88 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -140,13 +157,35 @@
 		979B15A29EACA3708841BF5E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BDB7F917339F052AC51D560E /* Pods-donatio.debug.xcconfig */,
-				F3B99D710B4ED472007CD282 /* Pods-donatio.release.xcconfig */,
-				369F77580093AE0363DBCAA4 /* Pods-donatio-donatioTests.debug.xcconfig */,
-				1219ECB320F139ABF64E72BA /* Pods-donatio-donatioTests.release.xcconfig */,
+				493B559A244A13522D6C22D2 /* Pods-donatio.debug.xcconfig */,
+				7E16CC22011D30D0E8EEC017 /* Pods-donatio.release.xcconfig */,
+				C89AAF14141A6A1857CEF3B2 /* Pods-donatio-donatioTests.debug.xcconfig */,
+				B101F214A07E8E9EFBB59E65 /* Pods-donatio-donatioTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D61D61C5A3564B7EB1693B88 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB0C2C51EBC64626A3D9F645 /* AntDesign.ttf */,
+				0A35B18A7DBF4D71921CA94B /* Entypo.ttf */,
+				ABF4D3B053184C448BC8CACD /* EvilIcons.ttf */,
+				BFE1485353CE414E9A0C42AD /* Feather.ttf */,
+				5DE8678521C64F05962C0BD6 /* FontAwesome.ttf */,
+				1C9D4AD08AE744A385FE4130 /* FontAwesome5_Brands.ttf */,
+				588ACFF39CBA435EB3F9B4ED /* FontAwesome5_Regular.ttf */,
+				5775582AB4594A7E8D3E9E09 /* FontAwesome5_Solid.ttf */,
+				E8C6522591464B62979014E8 /* Fontisto.ttf */,
+				A6FFFF3933CF44708BAD884D /* Foundation.ttf */,
+				164E11135F2E49838D05E58F /* Ionicons.ttf */,
+				0C91893B0DC94662B51352DC /* MaterialCommunityIcons.ttf */,
+				302F1A667C1E45189F682509 /* MaterialIcons.ttf */,
+				03A144D898824087A24DD400 /* Octicons.ttf */,
+				C1E64EA96C0249DBB8CA2232 /* SimpleLineIcons.ttf */,
+				B4130539D12A4E15969165AF /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,12 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "donatioTests" */;
 			buildPhases = (
-				8238FC2C1A35D996E68BF2A9 /* [CP] Check Pods Manifest.lock */,
+				D4D248C0F0F32EA2D0D7BDFF /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				B46275800D67B14C5E43E60F /* [CP] Embed Pods Frameworks */,
-				A62CC63CAD244BADECB8E1E2 /* [CP] Copy Pods Resources */,
+				32BB79BC22EE002D7C165EAE /* [CP] Embed Pods Frameworks */,
+				68293E4F698DFBD102396CF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +216,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "donatio" */;
 			buildPhases = (
-				AB1BDEB05C956DFF075FCD91 /* [CP] Check Pods Manifest.lock */,
+				2ABBF46664CA9E3F5187C583 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				0EE001A9B8338A616310E5A6 /* [CP] Embed Pods Frameworks */,
-				1807E15E0B42C76354549396 /* [CP] Copy Pods Resources */,
+				B82B17550CD912294942B86C /* [CP] Embed Pods Frameworks */,
+				EF133AB6EF3B39F66B251A97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,80 +304,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		0EE001A9B8338A616310E5A6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1807E15E0B42C76354549396 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8238FC2C1A35D996E68BF2A9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-donatio-donatioTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A62CC63CAD244BADECB8E1E2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB1BDEB05C956DFF075FCD91 /* [CP] Check Pods Manifest.lock */ = {
+		2ABBF46664CA9E3F5187C583 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,7 +326,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B46275800D67B14C5E43E60F /* [CP] Embed Pods Frameworks */ = {
+		32BB79BC22EE002D7C165EAE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -375,6 +341,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68293E4F698DFBD102396CF5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-donatio-donatioTests/Pods-donatio-donatioTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B82B17550CD912294942B86C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4D248C0F0F32EA2D0D7BDFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-donatio-donatioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF133AB6EF3B39F66B251A97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-donatio/Pods-donatio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -429,7 +468,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 369F77580093AE0363DBCAA4 /* Pods-donatio-donatioTests.debug.xcconfig */;
+			baseConfigurationReference = C89AAF14141A6A1857CEF3B2 /* Pods-donatio-donatioTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -456,7 +495,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1219ECB320F139ABF64E72BA /* Pods-donatio-donatioTests.release.xcconfig */;
+			baseConfigurationReference = B101F214A07E8E9EFBB59E65 /* Pods-donatio-donatioTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -480,11 +519,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDB7F917339F052AC51D560E /* Pods-donatio.debug.xcconfig */;
+			baseConfigurationReference = 493B559A244A13522D6C22D2 /* Pods-donatio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G6VSH7AF2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = donatio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,11 +546,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3B99D710B4ED472007CD282 /* Pods-donatio.release.xcconfig */;
+			baseConfigurationReference = 7E16CC22011D30D0E8EEC017 /* Pods-donatio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G6VSH7AF2;
 				INFOPLIST_FILE = donatio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

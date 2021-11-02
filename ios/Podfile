@@ -12,6 +12,12 @@ target 'donatio' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'react-native-text-input-mask', :path => '../node_modules/react-native-text-input-mask'
+
+  pod 'React-RCTText', :path => '../node_modules/react-native/Libraries/Text', :modular_headers => true
+
   target 'donatioTests' do
     inherit! :complete
     # Pods for testing
