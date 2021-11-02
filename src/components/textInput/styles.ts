@@ -42,4 +42,5 @@ export const TextField = styled.TextInput`
   padding-left: ${RFPercentage(2)}px;
   font-size: ${RFPercentage(2.5)}px;
   color: ${({theme}) => theme.textColor};
+  height: 100%;
 `;

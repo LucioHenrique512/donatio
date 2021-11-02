@@ -1,5 +1,10 @@
 import React from 'react';
-import {NativeSyntheticEvent, TextInputChangeEventData} from 'react-native';
+import {
+  KeyboardTypeOptions,
+  NativeSyntheticEvent,
+  TextInputChangeEventData,
+  TextInputFocusEventData,
+} from 'react-native';
 import {
   Container,
   HelperText,
@@ -10,15 +15,21 @@ import {
 
 interface TextInputProps {
   label?: string;
-  onChange?: (event: NativeSyntheticEvent<TextInputChangeEventData>) => void;
+  onChangeText?: (event: string) => void;
+  onBlur?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
   value?: string;
+  keyboardType?: KeyboardTypeOptions;
+  secureTextEntry?: boolean;
   helperText?: string;
   error?: boolean;
 }
 
 export const TextInput: React.FC<TextInputProps> = ({
   value,
-  onChange,
+  onChangeText,
+  onBlur,
+  secureTextEntry,
+  keyboardType,
   error,
   helperText,
   label,
@@ -27,7 +38,13 @@ export const TextInput: React.FC<TextInputProps> = ({
     <Container>
       <Label>{label}</Label>
       <TextInputContainer error={error}>
-        <TextField onChange={onChange} value={value} />
+        <TextField
+          onChangeText={onChangeText}
+          onBlur={onBlur}
+          value={value}
+          secureTextEntry={secureTextEntry}
+          keyboardType={keyboardType}
+        />
       </TextInputContainer>
       <HelperText error={error}>{helperText}</HelperText>
     </Container>
