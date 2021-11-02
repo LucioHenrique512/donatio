@@ -19,3 +19,7 @@ export const FormContainer = styled.ScrollView`
   flex: 1;
   margin-top: ${RFPercentage(3)}px;
 `;
+
+export const ButtonContainer = styled.View`
+  margin-top: ${RFPercentage(2)}px;
+`;

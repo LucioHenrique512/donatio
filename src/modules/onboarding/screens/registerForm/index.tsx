@@ -1,12 +1,12 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import React, {useEffect, useState} from 'react';
-import {Text, TouchableOpacity} from 'react-native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
+import React from 'react';
+
 import {Button, ProgressBar, TextInput, TopBar} from '../../../../components';
 import {OnboardingStackParamList} from '../../routes/routes';
-import {Container, StepTitle, FormContainer} from './styles';
+import {Container, StepTitle, FormContainer, ButtonContainer} from './styles';
 import {useFormik} from 'formik';
 import * as yup from 'yup';
+import {maskedInputPatterns} from '../../../../utils';
 
 type RegisterFormScreenProps = NativeStackScreenProps<
   OnboardingStackParamList,
@@ -27,7 +27,10 @@ const validationSchema = yup.object().shape({
     .string()
     .email('Favor insira um email válido')
     .required('Favor informe o email da sua conta.'),
-  //phoneNumber: yup.string().min(11, "Favor informe um telefone válido."),
+  phoneNumber: yup
+    .string()
+    .min(11, 'Favor informe um telefone válido.')
+    .required('Favor insira o seu telefone com  whatsapp.'),
   password: yup
     .string()
     .required('Favor insira a senha')
@@ -54,14 +57,12 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
       },
       validationSchema,
       onSubmit: values => {
-        console.log(values);
+        console.log(values.phoneNumber.length);
       },
     });
 
-  console.log(errors, touched);
-
   return (
-    <Container behavior={'padding'} keyboardVerticalOffset={RFPercentage(3)}>
+    <Container behavior={'height'}>
       <TopBar />
       <StepTitle>{'Informe seus\ndados de acesso para\ncontinuar'}</StepTitle>
       <ProgressBar percentage={33.33} />
@@ -83,9 +84,7 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
           onChangeText={handleChange('email')}
           onBlur={handleBlur('email')}
           error={!!errors.email && touched.email}
-          helperText={
-            !!touched.email && !!errors.email ? errors.email : ''
-          }
+          helperText={!!touched.email && !!errors.email ? errors.email : ''}
         />
 
         <TextInput
@@ -93,9 +92,12 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
           value={values.phoneNumber}
           onChangeText={handleChange('phoneNumber')}
           onBlur={handleBlur('phoneNumber')}
+          mask={maskedInputPatterns.phoneNumber}
           error={!!errors.phoneNumber && touched.phoneNumber}
           helperText={
-            !!touched.phoneNumber && !!errors.phoneNumber ? errors.phoneNumber : ''
+            !!touched.phoneNumber && !!errors.phoneNumber
+              ? errors.phoneNumber
+              : ''
           }
         />
 
@@ -119,11 +121,15 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
           secureTextEntry
           error={!!errors.passwordConfirmation && touched.passwordConfirmation}
           helperText={
-            !!touched.passwordConfirmation && !!errors.passwordConfirmation ? errors.passwordConfirmation : ''
+            !!touched.passwordConfirmation && !!errors.passwordConfirmation
+              ? errors.passwordConfirmation
+              : ''
           }
         />
 
-        <Button text={'CONTINUAR'} onPress={handleSubmit} />
+        <ButtonContainer>
+          <Button text={'CONTINUAR'} onPress={handleSubmit} />
+        </ButtonContainer>
       </FormContainer>
     </Container>
   );

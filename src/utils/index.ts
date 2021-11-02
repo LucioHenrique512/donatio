@@ -1,21 +1,5 @@
 export const maskedInputPatterns = {
-    phoneNumber: [
-      "(",
-      /\d/,
-      /\d/,
-      ")",
-      " ",
-      /\d/,
-      /\d/,
-      /\d/,
-      /\d/,
-      /\d/,
-      "-",
-      /\d/,
-      /\d/,
-      /\d/,
-      /\d/,
-    ],
+    phoneNumber: '+55 ([00]) [00000] [0000]',
   };
   
   export const removeCharacters = (string: string) => {

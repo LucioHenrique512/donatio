@@ -5,6 +5,8 @@ import {
   TextInputChangeEventData,
   TextInputFocusEventData,
 } from 'react-native';
+import {RFPercentage} from 'react-native-responsive-fontsize';
+import TextInputMask from 'react-native-text-input-mask';
 import {
   Container,
   HelperText,
@@ -22,6 +24,7 @@ interface TextInputProps {
   secureTextEntry?: boolean;
   helperText?: string;
   error?: boolean;
+  mask?: string;
 }
 
 export const TextInput: React.FC<TextInputProps> = ({
@@ -33,18 +36,29 @@ export const TextInput: React.FC<TextInputProps> = ({
   error,
   helperText,
   label,
+  mask,
 }) => {
   return (
     <Container>
       <Label>{label}</Label>
       <TextInputContainer error={error}>
-        <TextField
-          onChangeText={onChangeText}
-          onBlur={onBlur}
-          value={value}
-          secureTextEntry={secureTextEntry}
-          keyboardType={keyboardType}
-        />
+        {!!mask ? (
+          <TextInputMask
+            style={{marginLeft: RFPercentage(2),height:"100%"}}
+            onChangeText={(_, extracted) => {
+              onChangeText && onChangeText(`${extracted}`);
+            }}
+            mask={mask}
+          />
+        ) : (
+          <TextField
+            onChangeText={onChangeText}
+            onBlur={onBlur}
+            value={value}
+            secureTextEntry={secureTextEntry}
+            keyboardType={keyboardType}
+          />
+        )}
       </TextInputContainer>
       <HelperText error={error}>{helperText}</HelperText>
     </Container>
