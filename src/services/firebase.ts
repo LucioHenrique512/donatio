@@ -1,5 +1,3 @@
-import firebase from '@react-native-firebase/app';
-
-export const initializeFirebaseApp = () => {
-
-};
+export const fireBaseErrorCodes = {
+    emailAlreadyInUse:"auth/email-already-in-use"
+}
