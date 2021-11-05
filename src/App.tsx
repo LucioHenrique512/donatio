@@ -7,7 +7,6 @@ import {darkTheme, lightTheme} from './styles/themes';
 
 const App = () => {
   const colorScheme = useColorScheme();
-
   return (
     <ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>
       <Container>
