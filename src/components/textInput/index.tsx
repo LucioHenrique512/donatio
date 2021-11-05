@@ -44,7 +44,8 @@ export const TextInput: React.FC<TextInputProps> = ({
       <TextInputContainer error={error}>
         {!!mask ? (
           <TextInputMask
-            style={{marginLeft: RFPercentage(2),height:"100%"}}
+            keyboardType={keyboardType}
+            style={{marginLeft: RFPercentage(2), height: '100%'}}
             onChangeText={(_, extracted) => {
               onChangeText && onChangeText(`${extracted}`);
             }}

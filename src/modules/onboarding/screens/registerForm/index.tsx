@@ -81,6 +81,7 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
         <TextInput
           label="E-mail"
           value={values.email}
+          keyboardType={'email-address'}
           onChangeText={handleChange('email')}
           onBlur={handleBlur('email')}
           error={!!errors.email && touched.email}
