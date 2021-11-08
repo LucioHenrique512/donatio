@@ -1,10 +1,11 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {RegisterFormScreen, WellcomeScreen} from '../screens';
+import {RegisterFormScreen, WellcomeScreen,ChoiceScreen} from '../screens';
 
 export type OnboardingStackParamList = {
   Wellcome: undefined;
   RegisterFormScreen: undefined;
+  ChoiceScreen:undefined;
 };
 
 export const OnboardingNavigation: React.FC = () => {
@@ -17,6 +18,10 @@ export const OnboardingNavigation: React.FC = () => {
       <MainStack.Screen
         name={'RegisterFormScreen'}
         component={RegisterFormScreen}
+      />
+      <MainStack.Screen
+       name={"ChoiceScreen"}
+       component={ChoiceScreen}
       />
     </MainStack.Navigator>
   );

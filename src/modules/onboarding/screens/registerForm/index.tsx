@@ -10,7 +10,7 @@ import {createUser} from '../../services/firebase';
 import {Alert} from 'react-native';
 import {fireBaseErrorCodes} from '../../../../services/firebase';
 
-export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
+export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({navigation}) => {
   const {values, errors, touched, handleChange, handleBlur, handleSubmit} =
     useFormik({
       initialValues: {
@@ -22,24 +22,26 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({}) => {
       },
       //validationSchema,
       onSubmit: values => {
-        const onError = (error: any) => {
-          switch (error.code) {
-            case fireBaseErrorCodes.emailAlreadyInUse:
-              Alert.alert(
-                'Ocorreu um erro nos dados',
-                'Esse email já foi registrado por outra pessoa.',
-              );
-              break;
-            default:
-              Alert.alert(
-                'Ocorreu um erro',
-                'Ocorreu um erro desconhecido ao tentar criar o seu usuário, favor entre em contato com o suporte.',
-              );
-              break;
-          }
-        };
-        const onSuccess = () => {};
-        createUser(values, onError, onSuccess);
+        // const onError = (error: any) => {
+        //   switch (error.code) {
+        //     case fireBaseErrorCodes.emailAlreadyInUse:
+        //       Alert.alert(
+        //         'Ocorreu um erro nos dados',
+        //         'Esse email já foi registrado por outra pessoa.',
+        //       );
+        //       break;
+        //     default:
+        //       Alert.alert(
+        //         'Ocorreu um erro',
+        //         'Ocorreu um erro desconhecido ao tentar criar o seu usuário, favor entre em contato com o suporte.',
+        //       );
+        //       break;
+        //   }
+        // };
+        // const onSuccess = () => {};
+        // createUser(values, onError, onSuccess);
+
+        navigation.push("ChoiceScreen")
       },
     });
 
