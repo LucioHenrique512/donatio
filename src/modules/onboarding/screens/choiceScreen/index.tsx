@@ -23,8 +23,6 @@ const userTypesObject: UserTypesProps = {
 export const ChoiceScreen: React.FC = () => {
   const {userPayload, setUserType} = useOnboardingContext();
 
-  console.log(userPayload);
-
   return (
     <Container>
       <TopBar />
