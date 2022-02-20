@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/native-stack';
 import React from 'react';
 import {Alert, Text} from 'react-native';
-import {Button} from '../../../../components';
+import {Button, useTransitionOverlay} from '../../../../components';
 import {OnboardingStackParamList} from '../../routes/routes';
 import {
   AppTitle,
@@ -21,6 +21,7 @@ type WellcomeScreenProps = NativeStackScreenProps<
 >;
 
 export const WellcomeScreen: React.FC<WellcomeScreenProps> = ({navigation}) => {
+  const {showOverlay} = useTransitionOverlay();
   return (
     <Container>
       <AppTitle>Donatio</AppTitle>
@@ -35,7 +36,9 @@ export const WellcomeScreen: React.FC<WellcomeScreenProps> = ({navigation}) => {
         <Button
           text="Entrar"
           outline
-          onPress={() => Alert.alert('teste', 'deu certo')}
+          onPress={() => {
+            navigation.navigate('LoginScreen');
+          }}
         />
       </ButtonsContainer>
     </Container>

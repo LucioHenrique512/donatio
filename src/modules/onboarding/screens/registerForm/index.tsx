@@ -1,16 +1,38 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Button, ProgressBar, TextInput, TopBar} from '../../../../components';
 import {Container, StepTitle, FormContainer, ButtonContainer} from './styles';
 import {useFormik} from 'formik';
 import {RegisterFormScreenProps, validationSchema} from './types';
-import {maskedInputPatterns} from '../../../../utils';
+import {maskedInputPatterns, showToast} from '../../../../utils';
 import {createUser} from '../../services/firebase';
 import {Alert} from 'react-native';
 import {fireBaseErrorCodes} from '../../../../services/firebase';
+import {useOnboardingContext} from '../../context';
 
-export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({navigation}) => {
+export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({
+  navigation,
+}) => {
+  const {setUserPayload, setNewUserId} = useOnboardingContext();
+  const [loading, setLoading] = useState<boolean>();
+
+  const handleError = (errorCode?: string) => {
+    switch (errorCode) {
+      case 'auth/email-already-in-use':
+        showToast({
+          type: 'error',
+          text1: 'Esse email já está em uso.',
+        });
+        break;
+      default:
+        showToast({
+          type: 'error',
+          text1: 'Ocorreu um erro inesperado, por favor tente mais tarde.',
+        });
+        break;
+    }
+  };
+
   const {values, errors, touched, handleChange, handleBlur, handleSubmit} =
     useFormik({
       initialValues: {
@@ -20,28 +42,21 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({navigatio
         password: '',
         passwordConfirmation: '',
       },
-      //validationSchema,
+      validationSchema,
       onSubmit: values => {
-        // const onError = (error: any) => {
-        //   switch (error.code) {
-        //     case fireBaseErrorCodes.emailAlreadyInUse:
-        //       Alert.alert(
-        //         'Ocorreu um erro nos dados',
-        //         'Esse email já foi registrado por outra pessoa.',
-        //       );
-        //       break;
-        //     default:
-        //       Alert.alert(
-        //         'Ocorreu um erro',
-        //         'Ocorreu um erro desconhecido ao tentar criar o seu usuário, favor entre em contato com o suporte.',
-        //       );
-        //       break;
-        //   }
-        // };
-        // const onSuccess = () => {};
-        // createUser(values, onError, onSuccess);
-
-        navigation.push("ChoiceScreen")
+        setLoading(true);
+        createUser(
+          values,
+          error => {
+            setLoading(false);
+            handleError(error.code);
+          },
+          userId => {
+            setLoading(false);
+            setNewUserId(userId);
+            navigation.push('ChoiceScreen');
+          },
+        );
       },
     });
 
@@ -113,7 +128,12 @@ export const RegisterFormScreen: React.FC<RegisterFormScreenProps> = ({navigatio
         />
 
         <ButtonContainer>
-          <Button text={'CONTINUAR'} onPress={handleSubmit} />
+          <Button
+            text={'CONTINUAR'}
+            loading={loading}
+            disabled={Object.keys(errors).length !== 0}
+            onPress={handleSubmit}
+          />
         </ButtonContainer>
       </FormContainer>
     </Container>

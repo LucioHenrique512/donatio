@@ -8,8 +8,8 @@ interface ContainerProps {
 }
 
 export const Container = styled.TouchableOpacity<ContainerProps>`
-  background: ${({theme, outline}) =>
-    outline ? 'transparent' : theme.primary};
+  background: ${({theme, outline, disabled}) =>
+    outline ? 'transparent' : disabled ? `${theme.primary}65` : theme.primary};
   width: ${({width}) => (width ? width : '100%')};
   height: ${RFPercentage(8)}px;
   justify-content: center;
@@ -17,7 +17,8 @@ export const Container = styled.TouchableOpacity<ContainerProps>`
   margin-bottom: ${({marginBottom}) =>
     marginBottom ? marginBottom : RFPercentage(2.5)}px;
   border-radius: ${RFPercentage(1)}px;
-  border-color: ${({theme}) => theme.primary};
+  border-color: ${({theme, disabled}) =>
+    disabled ? `${theme.primary}65` : theme.primary};
   border-width: ${({outline}) => (outline ? RFPercentage(0.5) : 0)}px;
 `;
 

@@ -11,12 +11,15 @@ type OnboardingContextType = {
   userPayload?: UserType;
   setUserPayload: Dispatch<SetStateAction<UserType>>;
   setUserType: (type: UserTypes) => void;
+  newUserId: string;
+  setNewUserId: Dispatch<SetStateAction<string>>;
 };
 
 const OnboardingContext = createContext({} as OnboardingContextType);
 
 export const OnboardingContextProvider: React.FC = ({children}) => {
   const [userPayload, setUserPayload] = useState<UserType>({} as UserType);
+  const [newUserId, setNewUserId] = useState<string>('');
 
   const setUserType = (type: UserTypes) => {
     setUserPayload({...userPayload, type});
@@ -28,6 +31,8 @@ export const OnboardingContextProvider: React.FC = ({children}) => {
         userPayload,
         setUserPayload,
         setUserType,
+        newUserId,
+        setNewUserId,
       }}>
       {children}
     </OnboardingContext.Provider>
